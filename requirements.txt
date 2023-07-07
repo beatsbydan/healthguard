@@ -1,0 +1,5 @@
+# * Patient inputs name
+# * Patient inputs symptoms
+# * 4 different predictions as output
+# * Chat box for patient and doctor
+# * multi step form houses 1-3 then a differnet page houses 4

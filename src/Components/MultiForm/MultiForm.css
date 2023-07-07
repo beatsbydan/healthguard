@@ -1,0 +1,150 @@
+.multiForm{
+    width: 100%;
+}
+.multiForm form{
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+.top{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+}
+.formBlock{
+    width:100%;
+}
+.formBlock h1{
+    text-align: center;
+    margin: 2rem 0;
+    color: #354649 ;
+    font-size: 2.5rem;
+}
+.formElement{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.innerFormElement{
+    display: grid;
+    grid-template-columns: 70% 25%;
+    gap:5%
+}
+.innerFormActions{
+    width: 100%;
+    max-width: 150px;
+}
+.innerFormActions button{
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem;
+    border: 0.2rem solid #354649;
+    background-color: #354649;
+    color: #E0E7E9;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    border: none;
+    font-weight: 700;
+    text-align: center;
+}
+.formElement label{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    font-weight: 600;
+    color: #6C7A89;
+}
+.innerLabel{
+    max-width: 70%;
+}
+.error{
+    font-weight: unset;
+    font-size: 0.9rem;
+    color: rgba(255, 0, 0, 0.614);
+}
+.formElement input{
+    width:100%;
+    padding: 1em;
+    border: 0.1rem solid #6C7A89;
+    border-radius: 0.6rem;
+}
+.formElement input:focus{
+    outline:none;
+}
+.formElement input.errorField{
+    border-color: rgba(255, 0, 0, 0.614);
+}
+.formActions{
+    width:100%;
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem auto;
+}
+.formActions button{
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+    color: #354649;
+    border: 0.2rem solid #354649;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+}
+.letsChat{
+    cursor: pointer;
+    width: 100%;
+    max-width: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
+    justify-content: flex-end;
+    border-radius:0.5rem;
+}
+.letsChat a{
+    color: #354649;
+    text-decoration: none;
+    font-weight: 700;
+}
+.symptomsList{
+    width:100%;
+    margin: 2em auto ;
+}
+.symptomsList h2{
+    text-align: center;
+    color: #6C7A89;
+}
+.symptomsList em{
+    width: 100%;
+    float: right;
+    margin-top: 1rem;
+    padding-top: 0.3rem;
+    text-align: center;
+    font-weight: 600;
+}
+@media screen and (max-width:500px) {
+    .innerFormElement{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        grid-template-columns: unset;
+    }
+    .innerFormActions{
+        margin-top: 0.5rem;
+    }
+    .innerLabel{
+        max-width: unset;
+    }
+}

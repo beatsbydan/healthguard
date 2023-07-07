@@ -1,0 +1,36 @@
+.myHome{
+    width: 100%;
+}
+.home{
+    width: 90%;
+    max-width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+.home h1{
+    font-size: 3rem;
+    color: #354649;
+}
+.home h1 span{
+    display: block;
+    margin-top: 1rem;
+    color: #6C7A89;
+}
+.home a{
+    color: #354649;
+    text-decoration: none;
+    padding:1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 0.2rem solid #354649;
+    border-radius: 0.5rem;
+}
