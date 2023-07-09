@@ -9,12 +9,15 @@ import ValidateMultiStepForm from "../../Components/MultiForm/ValidateMultiStepF
 import axios from "axios";
 
 const FormContextProvider = (props) => {
+    // const postApi = ''
+    // const getApi = ''
     const initialItems = {
         name: '',
         nameError:'',
         symptom:'',
         symptomError:'',
-        symptoms : [],
+        symptoms: [],
+        predictions: [],
         symptomsError: '',
         currPage: 0
     }
@@ -27,6 +30,7 @@ const FormContextProvider = (props) => {
                 symptom: state.symptom,
                 symptomError: state.symptomError,
                 symptoms: state.symptoms,
+                predictions: state.predictions,
                 symptomsError: state.symptomsError,
                 currPage: state.currPage            
             }
@@ -39,6 +43,7 @@ const FormContextProvider = (props) => {
                 symptom: newSymptom,
                 symptomError: state.symptomError,
                 symptoms: state.symptoms, 
+                predictions: state.predictions,
                 symptomsError: state.symptomsError,
                 currPage: state.currPage            
             }
@@ -64,7 +69,8 @@ const FormContextProvider = (props) => {
                 nameError: state.nameError,
                 symptom: newSymptom,
                 symptomError: error.symptom,
-                symptoms: newSymptoms ,
+                symptoms: newSymptoms,
+                predictions: state.predictions,
                 symptomsError: state.symptomsError,
                 currPage: state.currPage   
             }
@@ -79,6 +85,7 @@ const FormContextProvider = (props) => {
                 symptom: state.symptom,
                 symptomError: state.symptomError,
                 symptoms: newSymptoms, 
+                predictions: state.predictions,
                 symptomsError: state.symptomsError,
                 currPage: state.currPage
             }
@@ -91,6 +98,7 @@ const FormContextProvider = (props) => {
                 symptom: state.symptom,
                 symptomError: state.symptomError,
                 symptoms: newSymptoms,
+                predictions: state.predictions,
                 symptomsError: state.symptomsError,
                 currPage: state.currPage 
             }
@@ -98,7 +106,8 @@ const FormContextProvider = (props) => {
         if(action.type === "NEXT"){
             let newNameError = state.nameError
             let newSymptomsError = state.symptomsError
-            let newPage = state.currPage;
+            let newPage = state.currPage
+            let newPredictions = []
             if(state.currPage === 0){
                 newNameError = ValidateStepOne(state.name)
                 if(newNameError === ""){
@@ -107,8 +116,29 @@ const FormContextProvider = (props) => {
             }
             if(state.currPage === 1){
                 newSymptomsError = ValidateMultiStepForm(state.symptoms)
+                const postData = {
+
+                }
                 if(newSymptomsError === ""){
-                    newPage = state.currPage + 1
+                    // axios.post(postApi,{...postData})
+                    // .then(res=>{
+                    //     console.log(res)
+                    //     if(res.status === 200){
+                    //         axios.get(getApi)
+                    //         .then(res=>{
+                    //             console.log(res)
+                    //             if(res.status === 200){
+                    //                 newPage = state.currPage + 1
+                    //             }
+                    //         })
+                    //         .catch(err=>{
+
+                    //         })
+                    //     }
+                    // })
+                    // .catch(err=>{
+                    //     console.log(err)
+                    // })
                 }
             }
             return{
@@ -117,6 +147,7 @@ const FormContextProvider = (props) => {
                 symptom: state.symptom,
                 symptomError: state.symptomError,
                 symptoms : state.symptoms,
+                predictions: newPredictions,
                 symptomsError: newSymptomsError,
                 currPage: newPage
             }
@@ -132,6 +163,7 @@ const FormContextProvider = (props) => {
                 symptom: state.symptom,
                 symptomError: state.symptomError,
                 symptoms: state.symptoms,
+                predictions: state.predictions,
                 symptomsError: state.symptomsError,
                 currPage: newPage
             }
