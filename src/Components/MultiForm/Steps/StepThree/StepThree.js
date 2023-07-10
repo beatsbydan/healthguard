@@ -8,7 +8,7 @@ const StepThree = () => {
     return (  
         <div className="formBlock">
             <h1>HERE'S WHAT WE THINK...</h1>
-            <ul className='predictionsBlock'>
+            {/* <ul className='predictionsBlock'>
                 {ctx.formDetails.predictions.map(prediction=>{
                     return(
                         <li className='prediction' key={prediction.id}>
@@ -16,7 +16,7 @@ const StepThree = () => {
                         </li>
                     )
                 })}
-            </ul>
+            </ul> */}
             <div className="formActions">
                 <button className='prev' onClick={ctx.handlePrevPage} type='button'>BACK</button>
             </div>

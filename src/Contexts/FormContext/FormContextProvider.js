@@ -120,6 +120,7 @@ const FormContextProvider = (props) => {
 
                 }
                 if(newSymptomsError === ""){
+                    newPage = state.currPage + 1
                     // axios.post(postApi,{...postData})
                     // .then(res=>{
                     //     console.log(res)
