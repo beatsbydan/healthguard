@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/healthguard/static/css/main.1e56b79c.css",
+    "main.js": "/healthguard/static/js/main.857732a1.js",
+    "static/js/787.31c64576.chunk.js": "/healthguard/static/js/787.31c64576.chunk.js",
+    "index.html": "/healthguard/index.html",
+    "main.1e56b79c.css.map": "/healthguard/static/css/main.1e56b79c.css.map",
+    "main.857732a1.js.map": "/healthguard/static/js/main.857732a1.js.map",
+    "787.31c64576.chunk.js.map": "/healthguard/static/js/787.31c64576.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e56b79c.css",
+    "static/js/main.857732a1.js"
+  ]
+}
