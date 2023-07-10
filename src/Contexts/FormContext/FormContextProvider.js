@@ -56,12 +56,8 @@ const FormContextProvider = (props) => {
                 symptoms: state.symptoms
             }
             const error = ValidateStepTwo(data)
-            if(error.symptom === "" && !error.symptomsError){
-                if(!state.symptoms.some(symptom=>{
-                    return symptom.name === action.value.name
-                })){
-                    newSymptoms = state.symptoms.push(action.value)
-                }
+            if(error.symptom === "" && !error.symptomsError && !state.symptoms.find(symptom=> symptom.name === action.value.name)){
+                newSymptoms = state.symptoms.concat(action.value)
                 newSymptom = ''
             }
             return{
@@ -117,8 +113,9 @@ const FormContextProvider = (props) => {
             if(state.currPage === 1){
                 newSymptomsError = ValidateMultiStepForm(state.symptoms)
                 const postData = {
-
+                    symptoms :[...state.symptoms]
                 }
+                console.log(postData)
                 if(newSymptomsError === ""){
                     newPage = state.currPage + 1
                     // axios.post(postApi,{...postData})
