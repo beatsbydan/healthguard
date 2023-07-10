@@ -9,6 +9,7 @@ const FormContext = React.createContext({
     handleSymptomChange: ()=>{},
     addSymptom: ()=>{},
     removeSymptom: ()=>{},
+    handleDefault: ()=>{},
     clearSymptoms: ()=>{},
     handleSubmit: ()=>{}
 

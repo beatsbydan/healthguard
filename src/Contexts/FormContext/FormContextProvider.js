@@ -169,6 +169,19 @@ const FormContextProvider = (props) => {
                 currPage: newPage
             }
         }
+        if(action.type === "DEFAULT"){
+            let newPage = 0
+            return{
+                name: state.name,
+                nameError: state.nameError,
+                symptom: state.symptom,
+                symptomError: state.symptomError,
+                symptoms: state.symptoms,
+                predictions: state.predictions,
+                symptomsError: state.symptomsError,
+                currPage: newPage
+            }
+        }
         return initialItems;
     }
     const [formDetails, dispatchFormDetails] = useReducer(formReducer, initialItems)
@@ -196,6 +209,9 @@ const FormContextProvider = (props) => {
     const handleSubmit = () => {
         dispatchFormDetails({type: 'NEXT'})
     }
+    const handleDefault = () => {
+        dispatchFormDetails({type: 'DEFAULT'})
+    }
     const getPage = () => {
         if(formDetails.currPage === 0){
             return <StepOne/>
@@ -217,6 +233,7 @@ const FormContextProvider = (props) => {
         addSymptom: addSymptom,
         removeSymptom: removeSymptom,
         clearSymptoms: clearSymptoms,
+        handleDefault: handleDefault,
         handleSubmit: handleSubmit
     }
     return ( 
