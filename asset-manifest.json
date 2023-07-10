@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/healthguard/static/css/main.1e56b79c.css",
-    "main.js": "/healthguard/static/js/main.118fbad3.js",
-    "static/js/787.31c64576.chunk.js": "/healthguard/static/js/787.31c64576.chunk.js",
+    "main.css": "/healthguard/static/css/main.663c6209.css",
+    "main.js": "/healthguard/static/js/main.db6ce9bd.js",
     "index.html": "/healthguard/index.html",
-    "main.1e56b79c.css.map": "/healthguard/static/css/main.1e56b79c.css.map",
-    "main.118fbad3.js.map": "/healthguard/static/js/main.118fbad3.js.map",
-    "787.31c64576.chunk.js.map": "/healthguard/static/js/787.31c64576.chunk.js.map"
+    "main.663c6209.css.map": "/healthguard/static/css/main.663c6209.css.map",
+    "main.db6ce9bd.js.map": "/healthguard/static/js/main.db6ce9bd.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e56b79c.css",
-    "static/js/main.118fbad3.js"
+    "static/css/main.663c6209.css",
+    "static/js/main.db6ce9bd.js"
   ]
 }
